@@ -45,7 +45,7 @@ img {
 .card {
   margin-inline: auto;
   background-color: var(--white);
-  max-width: 20.4375rem;
+  width: 20.4375rem;
   border-radius: 1.25rem;
   border: 1px solid var(--gray-950);
   padding: 1.5rem;
@@ -64,8 +64,10 @@ img {
       margin-top: 0.75rem;
     }
 
-    & span.tag {
-      display: block;
+    & div.tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 73px;
       height: 26px;
       padding: 0.25rem 0.75rem;
@@ -120,6 +122,31 @@ footer.attribution {
     &:hover {
       text-decoration: underline;
       color: var(--yellow);
+    }
+  }
+}
+
+@media (width >= 80rem) {
+  .card {
+    width: 24rem;
+
+    & .content {
+      & div.tag {
+        width: 82px;
+        height: 29px;
+      }
+
+      & p.plubished {
+        font: var(--text-preset-3);
+      }
+
+      & h1 {
+        font: var(--text-preset-1);
+      }
+
+      & p {
+        font: var(--text-preset-2);
+      }
     }
   }
 }
